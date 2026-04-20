@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 require 'minitest/autorun'
-require 'minitest/unit'
+require 'minitest/unit' if RUBY_VERSION < '3.2'
+require 'minitest/mock' if RUBY_VERSION >= '3.2'
 require 'rspec/expectations/minitest_integration'
 require 'rspec/mocks/minitest_integration'
 require 'minitest-spec-rails'
