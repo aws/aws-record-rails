@@ -5,7 +5,7 @@ require 'aws-record'
 module ModelTableConfig
   class << self
     def config
-      @mock = MiniTest::Mock.new
+      @mock = Minitest::Mock.new
       @mock.expect(:compatible?, false)
       @mock.expect(:migrate!, nil)
     end
